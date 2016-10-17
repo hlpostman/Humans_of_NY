@@ -17,6 +17,7 @@
 		BEC4B6701DB40B01008279A6 /* TumblrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC4B66F1DB40B01008279A6 /* TumblrUITests.swift */; };
 		BEC4B67E1DB45F59008279A6 /* TumblrTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC4B67D1DB45F59008279A6 /* TumblrTableViewCell.swift */; };
 		BEC4B6801DB499DD008279A6 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC4B67F1DB499DD008279A6 /* PhotoDetailsViewController.swift */; };
+		BEC4B6821DB49BD9008279A6 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC4B6811DB49BD9008279A6 /* PhotoDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		BEC4B6711DB40B01008279A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEC4B67D1DB45F59008279A6 /* TumblrTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TumblrTableViewCell.swift; sourceTree = "<group>"; };
 		BEC4B67F1DB499DD008279A6 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
+		BEC4B6811DB49BD9008279A6 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoDetailsViewController.swift; path = Tumblr/PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				BEC4B67F1DB499DD008279A6 /* PhotoDetailsViewController.swift */,
+				BEC4B6811DB49BD9008279A6 /* PhotoDetailsViewController.swift */,
 				BEC4B67D1DB45F59008279A6 /* TumblrTableViewCell.swift */,
 				BEC4B64E1DB40B00008279A6 /* Tumblr */,
 				BEC4B6631DB40B01008279A6 /* TumblrTests */,
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC4B6801DB499DD008279A6 /* PhotoDetailsViewController.swift in Sources */,
+				BEC4B6821DB49BD9008279A6 /* PhotoDetailsViewController.swift in Sources */,
 				BEC4B6521DB40B00008279A6 /* PhotosViewController.swift in Sources */,
 				BEC4B6501DB40B00008279A6 /* AppDelegate.swift in Sources */,
 				BEC4B67E1DB45F59008279A6 /* TumblrTableViewCell.swift in Sources */,
