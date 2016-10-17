@@ -18,23 +18,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fGW-3L-p2x">
-                                <frame key="frameInset" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="401" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fGW-3L-p2x">
+                                <color key="backgroundColor" red="0.76251902179999997" green="0.31429450380000001" blue="0.97997134919999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="320" id="ybe-hZ-Iva" customClass="TumblrTableViewCell" customModule="Tumblr" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="320"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="com.aristotle.TumblrTableViewPrototypeCell" rowHeight="401" id="ybe-hZ-Iva" customClass="TumblrTableViewCell" customModule="Tumblr" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="401"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ybe-hZ-Iva" id="y8w-QY-waY">
-                                            <frame key="frameInset" width="375" height="319"/>
+                                            <frame key="frameInset" width="375" height="400"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bzC-q3-hDW">
+                                                    <frame key="frameInset" width="368" height="322"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xR2-xH-9nL">
+                                                            <frame key="frameInset" width="368" height="322"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="xR2-xH-9nL" firstAttribute="top" secondItem="bzC-q3-hDW" secondAttribute="top" id="4Zw-rl-Z1O"/>
+                                                        <constraint firstAttribute="trailing" secondItem="xR2-xH-9nL" secondAttribute="trailing" id="byH-cV-EWV"/>
+                                                        <constraint firstItem="xR2-xH-9nL" firstAttribute="leading" secondItem="bzC-q3-hDW" secondAttribute="leading" id="gd6-A4-TT8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="xR2-xH-9nL" secondAttribute="bottom" id="n9k-gV-Yvm"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="TumblrImageViewInTableCell" destination="xR2-xH-9nL" id="WsO-hy-jtA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fGW-3L-p2x" secondAttribute="trailing" id="DCb-30-2xT"/>
+                            <constraint firstItem="fGW-3L-p2x" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dqs-na-A3a"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fGW-3L-p2x" secondAttribute="bottom" id="o82-16-cs6"/>
+                            <constraint firstItem="fGW-3L-p2x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pyY-vl-l3h"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="fGW-3L-p2x" id="jlg-5u-bJo"/>
