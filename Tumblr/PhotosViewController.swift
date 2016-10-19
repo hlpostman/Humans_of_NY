@@ -18,7 +18,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 340 // UITableViewAutomaticDimension
+        tableView.rowHeight = 280 // UITableViewAutomaticDimension
         // Make a GET request to Tumblr and save the relevant return info as an array of Tumblr users' posts
         let apiKey = "Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV"
         let url = URL(string:"https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/posts/photo?api_key=\(apiKey)")
