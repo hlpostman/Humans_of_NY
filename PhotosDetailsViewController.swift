@@ -1,14 +1,14 @@
 //
-//  PhotoDetailsViewController.swift
+//  PhotosDetailsViewController.swift
 //  Tumblr
 //
-//  Created by Aristotle on 2016-10-16.
+//  Created by Aristotle on 2016-10-19.
 //  Copyright © 2016 Aristotle. All rights reserved.
 //
 
 import UIKit
 
-class PhotoDetailsViewController: UIViewController {
+class PhotosDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
