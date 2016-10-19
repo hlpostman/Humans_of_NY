@@ -69,7 +69,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if let photos = aPost?["photos"] as? NSArray {
             if let photoObject = photos[0] as? NSDictionary {
                 if let originalSize = photoObject["original_size"] as? NSDictionary {
-                    print("[DEBUG originalSize]: \(originalSize["url"]!)")
+//                    print("[DEBUG originalSize]: \(originalSize["url"]!)")
                     let url = originalSize["url"]! as! String
                     return url
                 }
@@ -80,15 +80,17 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return nil
     }
 
-    //            if let original_size = photos[2] as? NSDictionary {
-    //                print("Original_size:\n\(original_size)")
-    ////                if let thePostImageURL = original_size["url"] as? String {
-    ////                    print("the URL:\n\(thePostImageURL)")
-    ////                    return thePostImageURL
-    ////                }
-    ////                return nil
-    //            }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationViewController = segue.destination as? PhotosDetailsViewController
+        var indexPath = self.tableView.indexPath(for: sender as! UITableViewCell)
+        let urlString = self.getUrlString(id: (indexPath?.row)!)
+        let url = URL(string: urlString!)
+        print("[DEBUG URL + INDEXPATH", url!, (indexPath?.row)!)
+         destinationViewController?.detailImage?.setImageWith(url!)
+
+        // place picture url into detail view
+        // place associated text (pic description) below UImageView, and photo ID
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

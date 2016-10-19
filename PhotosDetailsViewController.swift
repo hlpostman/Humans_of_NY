@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import AFNetworking
 
 class PhotosDetailsViewController: UIViewController {
 
+    @IBOutlet public weak var detailImage: UIImageView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
