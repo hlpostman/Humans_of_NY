@@ -16,6 +16,9 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(refreshControl:)), for: UIControlEvents.valueChanged)
+        tableView.insertSubview(refreshControl, at: 0)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 280 // UITableViewAutomaticDimension
@@ -39,6 +42,25 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         })
         task.resume()
+    }
+    
+    func refreshControlAction (refreshControl: UIRefreshControl) {
+        let apiKey = "Q6vHoaVm5L1u2ZAW1fqv3Jw48gFzYVg9P0vH0VHl3GVy6quoGV"
+        let url = URL(string:"https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/posts/photo?api_key=\(apiKey)")
+        let request = URLRequest(url: url!)
+        let session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task : URLSessionDataTask = session.dataTask(with: request, completionHandler: { (dataOrNil, response, error) in
+            if let data = dataOrNil {
+                if let responseDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
+                    if let responseObject = responseDictionary["respone"] as? [String:AnyObject] {
+                        self.postArray = responseObject["posts"] as? NSArray
+                    }
+                }
+            }
+            self.tableView.reloadData()
+            refreshControl.endRefreshing()
+        })
+    task.resume()
     }
 
     /*
@@ -86,9 +108,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let urlString = self.getUrlString(id: (indexPath?.row)!)
         let url = URL(string: urlString!)
         print("[DEBUG URL + INDEXPATH", url!, (indexPath?.row)!)
-         destinationViewController?.detailImage?.setImageWith(url!)
-
-        // place picture url into detail view
+        destinationViewController?.detailImageURL = url
         // place associated text (pic description) below UImageView, and photo ID
     }
     override func didReceiveMemoryWarning() {

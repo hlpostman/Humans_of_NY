@@ -82,15 +82,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B9n-xl-sf3">
-                                <frame key="frameInset" width="375" height="309"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwC-3o-RW3">
+                                <frame key="frameInset" minX="37" minY="350" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78609661217275273" green="0.25811976116753677" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9J-Qw-S2R">
+                                <frame key="frameInset" minX="37" minY="408" height="84.56%" maxX="38"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.40360447388319654" blue="0.51945262992236052" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B9n-xl-sf3">
+                                <frame key="frameInset" minY="64" width="375" height="309"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B9n-xl-sf3" firstAttribute="leading" secondItem="tzK-jc-0u9" secondAttribute="leading" id="4TF-VO-qbv"/>
+                            <constraint firstAttribute="trailing" secondItem="B9n-xl-sf3" secondAttribute="trailing" id="8Ay-X9-ddF"/>
+                            <constraint firstItem="B9n-xl-sf3" firstAttribute="top" secondItem="liU-P4-bQU" secondAttribute="bottom" id="kxq-mr-gxX"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentInTheory" destination="Z9J-Qw-S2R" id="YJj-TA-0mV"/>
                         <outlet property="detailImage" destination="B9n-xl-sf3" id="Vuj-Nw-Ia1"/>
+                        <outlet property="picNumberLabel" destination="NwC-3o-RW3" id="5Hc-FR-rez"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="00s-JP-Lyx" userLabel="First Responder" sceneMemberID="firstResponder"/>

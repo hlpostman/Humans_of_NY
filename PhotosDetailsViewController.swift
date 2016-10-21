@@ -11,11 +11,15 @@ import AFNetworking
 
 class PhotosDetailsViewController: UIViewController {
 
-    @IBOutlet public weak var detailImage: UIImageView?
+    @IBOutlet weak var detailImage: UIImageView?
+    var detailImageURL: URL?
+    
+    @IBOutlet weak var picNumberLabel: UILabel!
+    @IBOutlet weak var contentInTheory: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.detailImage?.setImageWith(self.detailImageURL!)
         // Do any additional setup after loading the view.
     }
 
