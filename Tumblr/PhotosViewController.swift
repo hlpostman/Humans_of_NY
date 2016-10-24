@@ -105,7 +105,13 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func    getPhotoDescription(id: Int) -> String? {
         let aPost = self.postArray![id] as? NSDictionary
         // print("[DEBUG] aPost:\n\(aPost?.count)")
-        return aPost?["caption"] as! String?
+        var caption = aPost?["caption"] as! String?
+        caption  = caption?.replacingOccurrences(of: "<p>", with: "")
+        caption = caption?.replacingOccurrences(of: "</p>", with: "")
+        caption = caption?.replacingOccurrences(of: "<br>", with: "")
+        caption = caption?.replacingOccurrences(of: "</br>", with: "")
+        caption = caption?.replacingOccurrences(of: "<br/>", with: "")
+        return caption
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
