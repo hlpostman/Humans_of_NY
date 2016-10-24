@@ -14,12 +14,15 @@ class PhotosDetailsViewController: UIViewController {
     @IBOutlet weak var detailImage: UIImageView?
     var detailImageURL: URL?
     
-    @IBOutlet weak var picNumberLabel: UILabel!
-    @IBOutlet weak var contentInTheory: UILabel!
+    
+    @IBOutlet weak var photoDescriptionTextView: UITextView!
+    var photoDescription: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.detailImage?.setImageWith(self.detailImageURL!)
+        self.photoDescriptionTextView.isEditable = false
+        self.photoDescriptionTextView.text = photoDescription!
         // Do any additional setup after loading the view.
     }
 

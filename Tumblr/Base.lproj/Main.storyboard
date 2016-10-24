@@ -15,17 +15,17 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="401" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fGW-3L-p2x">
                                 <color key="backgroundColor" red="0.76251902179999997" green="0.31429450380000001" blue="0.97997134919999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="com.aristotle.TumblrTableViewPrototypeCell" rowHeight="401" id="ybe-hZ-Iva" customClass="TumblrTableViewCell" customModule="Tumblr" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="401"/>
+                                        <rect key="frame" x="0.0" y="92" width="414" height="401"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ybe-hZ-Iva" id="y8w-QY-waY">
-                                            <frame key="frameInset" width="375" height="401"/>
+                                            <frame key="frameInset" width="414" height="401"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bzC-q3-hDW">
@@ -79,45 +79,34 @@
                         <viewControllerLayoutGuide type="bottom" id="o5u-F5-vrz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tzK-jc-0u9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwC-3o-RW3">
-                                <frame key="frameInset" minX="37" minY="350" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.78609661217275273" green="0.25811976116753677" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9J-Qw-S2R">
-                                <frame key="frameInset" minX="37" minY="408" height="84.56%" maxX="38"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.40360447388319654" blue="0.51945262992236052" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="atL-Ph-LD2">
+                                <frame key="frameInset" minX="49.06%" minY="92.83%" width="308" height="248"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B9n-xl-sf3">
-                                <frame key="frameInset" minY="64" width="375" height="309"/>
+                                <frame key="frameInset" minY="16.23%" height="274"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="B9n-xl-sf3" firstAttribute="leading" secondItem="tzK-jc-0u9" secondAttribute="leading" id="4TF-VO-qbv"/>
-                            <constraint firstAttribute="trailing" secondItem="B9n-xl-sf3" secondAttribute="trailing" id="8Ay-X9-ddF"/>
-                            <constraint firstItem="B9n-xl-sf3" firstAttribute="top" secondItem="liU-P4-bQU" secondAttribute="bottom" id="kxq-mr-gxX"/>
+                            <constraint firstItem="B9n-xl-sf3" firstAttribute="top" secondItem="liU-P4-bQU" secondAttribute="bottom" id="ngr-7b-cmc"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="contentInTheory" destination="Z9J-Qw-S2R" id="YJj-TA-0mV"/>
                         <outlet property="detailImage" destination="B9n-xl-sf3" id="Vuj-Nw-Ia1"/>
-                        <outlet property="picNumberLabel" destination="NwC-3o-RW3" id="5Hc-FR-rez"/>
+                        <outlet property="photoDescriptionTextView" destination="atL-Ph-LD2" id="FUR-tw-pk2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="00s-JP-Lyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135.2" y="25.637181409295355"/>
+            <point key="canvasLocation" x="1133.5999999999999" y="24.7376311844078"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="coc-He-c9Z">

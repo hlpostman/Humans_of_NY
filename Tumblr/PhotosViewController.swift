@@ -102,6 +102,12 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return nil
     }
 
+    func    getPhotoDescription(id: Int) -> String? {
+        let aPost = self.postArray![id] as? NSDictionary
+        // print("[DEBUG] aPost:\n\(aPost?.count)")
+        return aPost?["caption"] as! String?
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationViewController = segue.destination as? PhotosDetailsViewController
         var indexPath = self.tableView.indexPath(for: sender as! UITableViewCell)
@@ -110,6 +116,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         print("[DEBUG URL + INDEXPATH", url!, (indexPath?.row)!)
         destinationViewController?.detailImageURL = url
         // place associated text (pic description) below UImageView, and photo ID
+        destinationViewController?.photoDescription = self.getPhotoDescription(id: (indexPath?.row)!)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
